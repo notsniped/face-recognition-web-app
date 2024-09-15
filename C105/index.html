@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Web App</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Webcam.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    
+    <!-- ml5.js -->
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Heading -->
+        <h1 class="text-center">Face Recognition Web App</h1>
+        
+        <!-- Family Members List -->
+        <ul id="family-member-list" class="list-group my-4">
+            <li class="list-group-item">Dhruv</li>
+            <li class="list-group-item">Dad</li>
+            <li class="list-group-item">Panda</li>
+        </ul>
+        
+        <!-- Webcam Live View -->
+        <div class="text-center">
+            <div class="d-flex justify-content-center">
+                <div id="webcam-container" class="mb-3">
+                    <!-- Webcam will be displayed here -->
+                </div>
+            </div>
+            
+            <!-- Captured Image -->
+            <div id="captured-image" class="mb-3">
+                <!-- Captured image will be displayed here -->
+                <img id="snapshot" src="" alt="Captured Image"/>
+            </div>
+            
+            <!-- Capture Button -->
+            <button class="btn btn-primary" onclick="captureImage()">Capture Image</button>
+            
+            <!-- Identify Button -->
+            <button class="btn btn-success ml-2" onclick="identifyImage()">Identify Image</button>
+        </div>
+        
+        <!-- Displaying Recognition Results -->
+        <div class="text-center mt-4">
+            <span id="recognized-name" class="font-weight-bold">Name: </span>
+            <span id="recognition-accuracy">Accuracy: </span>
+        </div>
+    </div>
+    
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>
